@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Recursive
+{
+    public static int sum(int [] arr, int k)// the recursive method
+  {
+    if (k > 0)
+	{
+      return ( arr[k - 1] + sum(arr, k - 1));
+    } 
+	else
+	{
+      return 0;
+    }
+  }
+  public static void main(String[] args)
+  {
+	int[] arr = new int[5];
+	System.out.println("Please enter five #'s to get their sum:");
+	for(int i = 0; i <= 4; i++)
+	{
+		Scanner scan = new Scanner(System.in);
+		arr[i] = scan.nextInt();
+	}
+	int result = sum(arr, 5);
+    System.out.println("Total Sum: " + result);
+  }
+}
